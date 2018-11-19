@@ -1,0 +1,116 @@
+\section{Project management}
+Il \textbf{Project Management} \`e l'insieme delle azioni atte a
+\textbf{pianificare}, \textbf{monitorare} e \textbf{controllare}
+progetti software. \`E necessario assicurarsi che il software
+venga consegnato in tempo e che soddisfi i requisiti, rispettando
+il budget.
+
+La figura del \textbf{manager}:
+
+\begin{description}
+    \item[Pianifica]: qual \`e l'obbiettivo, quali sono i tempi
+    
+    \item[Organizza]: che attivit\`a svolgere, quali modelli usare
+    
+    \item[Rende disponibili le risorse]: selezione del personale
+    
+    \item[Dirige]: supportare l'esecuzione delle attivit\`a previste
+    
+    \item[Monitora e controlla]: verificare l'esecuzione e i risultati,
+                                mantenere il focus sull'obbiettivo
+                                mediante eventuali azioni correttive 
+\end{description}
+
+\subsection{Planning}
+
+La prima attivit\`a per la gestione di un progetto software riguarda
+la \textbf{pianificazione}: \`e un'attivit\`a \textbf{continua} che
+segue il progetto in tutta la sua vita; il \textbf{piano} principale
+si compone di piani di supporto con lo scopo di gestire la qualit\`a e
+la validazione del software, il suo mantenimento, lo sviluppo del
+personale, ecc \dots
+
+Il piano iniziale prevede la stesura di \textbf{milestones} (
+obbiettivi "importanti" al termine dei quali viene solitamente steso
+un \textit{report}), \textbf{deliverables} (risultati che possono
+essere consegnati direttamente al cliente) e \textbf{scheduling}
+(organizzare i vari task, i tempi, dove deve lavorare il personale,
+ecc \dots).
+
+\subsection{Scheduling}
+
+L'attivit\`a di scheduling prevede la \textbf{suddivisione} del progetto
+in task semplici, \textbf{stimarne} le risorse e il tempo necessari al
+completamento, decidere come organizzare i task \textbf{concorrentemente}
+per poter utilizzare in modo ottimale la \textit{workforce},
+la \textbf{minimizzazione delle dipendenze} per evitare stalli causati
+da ritardi nello sviluppo.
+
+Al fine di aiutare la comprensione dello scheduling vengono utilizzati
+\textbf{Bar charts} (per confrontare i tempi dei task rispetto al
+calendario) e \textbf{Activity networks} (un grafo per visualizzare le
+\textit{dependencies} e il \textbf{critical path}, ovvero il percorso
+pi\`u lungo sulla network).\\~\\
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=350pt]{img/BarChart.png}
+    
+    \vspace{2cm}
+    
+    \includegraphics[width=350pt]{img/ActivityNetwork.png}
+
+    \caption*{Bar chart e Activity network}
+\end{center}
+\end{figure}
+
+\subsection{Gestione del Rischio}
+
+Forse una delle attivit\`a pi\`u importanti, la gestione del rischio
+mira a \textbf{identificare} i possibili rischi e \textbf{pianificare}
+attivit\`a con lo scopo di minimizzarne la probabilit\`a di verifica
+e l'effetto sul progetto. \`E indispensabile \textbf{anticipare}
+e quindi \textbf{evitare} (\textit{il pi\`u possibile}) i rischi
+e capirne l'impatto negativo sul progetto, il prodotto e il business.\\
+
+I rischi si possono classificare secondo due caratteristiche:
+\textbf{tipo di rischio} (tecnico, organizzativo, \dots) e \textbf{cos\`e
+affetto dal rischio} (scheduling, qualit\`a, performance, \dots).\\
+
+Il \textbf{processo di gestione del rischio} prevede:
+\begin{description}
+    \item[Identificazione] dei possibili rischi, attraverso un
+                \textit{brainstorming} o l'esperienza del manager,
+                una \textit{checklist} dei rischi pi\`u comuni 
+     
+    \item[Analisi] dei rischi per capire con che \textbf{probabilit\`a}
+                possono verificarsi (molto bassa $\rightarrow$ molto alta)
+                e quali \textbf{conseguenze} avranno sul progetto
+                (insignificante $\rightarrow$ catastrofico)
+
+    \item[Planning] di attivit\`a con lo scopo di evitare o minimizzare
+                    conseguenze: ogni rischio viene gestito con una
+                    strategia (\textbf{avoidance} per abbassare la
+                    probabilit\`a, \textbf{minimization} per
+                    diminuirne gli effetti, \textbf{contingency}
+                    per affrontarlo quando si presenta)
+    
+    \item[Monitoring] del progetto per verificare che il planning
+                    abbia funzionato, per controllare come si
+                    evolvono i rischi e per, eventualmente, definire
+                    nuovi planning 
+\end{description}
+
+Al fine di identificare i primi rischi vengono solitamente utilizzati
+degli \textbf{indicatori} che riguardano la \textbf{tecnologia}
+(se c'\`e mancanza di supporto software o vengono rilevati numerosi
+problemi tecnici), il \textbf{personale} (se non c'\`e poca relazione
+tra i membri del team), gli \textbf{strumenti} (se c'\`e riluttanza
+all'utilizzo di CASE), la \textbf{stima dei tempi} (se si verificano
+ritardi).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=350pt]{img/RiskManagement.png}
+    \caption*{Il processo di gestione del rischio}
+\end{figure}

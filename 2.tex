@@ -1,0 +1,108 @@
+\chapter{System Engineering}
+
+Un \textbf{Sistema} \`e una collezione di componenti interconnessi
+che lavorano insieme per il raggiungimento di un obbiettivo comune.\\
+Nel nostro contesto, un sistema include software e hardware e viene
+utilizzato dalle persone. Le componenti di un sistema dipendono dalle
+altre e le loro propriet\`a e il loro comportamento sono intrinsecamente
+interlegati.\\
+
+I problemi affrontati dal \textbf{System Engineering} riguardano
+lo sviluppo di sistemi complessi designati per durare nel tempo
+in un \textbf{ambiente in continua evoluzione}. Il software sta
+avendo sempre pi\`u importanza nella costruzione di sistemi complessi
+e spesso viene visto come un problema in quanto (a volte) ritarda
+lo sviluppo di grossi progetti.
+
+Per questo bisogna avere una visione pi\`u generale del sistema
+prima di gettarsi nella produzione del software.\\
+
+Le \textbf{propriet\`a complessive} di un sistema sono quelle che
+emergono da una visione pi\`u ampia del sistema stesso e dipendono
+\textbf{non solo} dalle propriet\`a delle singole componenti ma anche
+dalle propriet\`a che derivano dalle loro interazioni.\\~\\
+
+\textit{Esempi}
+\begin{description}
+    \item[Peso complessivo] dipende solo dal peso
+            dei singoli componenti
+    \item[Affidabilit\`a] dipende \textbf{anche} dalle interazioni
+    \item[Usabilit\`a] \`e una propriet\`a complessa che dipende
+            anche da \textbf{chi} usa il software~e \textbf{dove}
+\end{description}
+\newpage
+
+Le propriet\`a complessive si dividono in:
+\begin{description}
+    \item[Functional] riguardano la relazione \textbf{input/output}
+            del sistema (ex. Se la bicicletta \`e costruita come si deve
+            allora \`e un mezzo di trasporto valido)
+    \item[Non-functional] riguardano il \textbf{comportamento} del sistema
+            nel suo ambiente di utilizzo; affidabilit\`a, performance,
+            sicurezza (\textit{safety}) e protezione (\textit{security});
+            sono propriet\`a critiche in quanto il \textit{non}
+            raggiungimento di determinati livelli rende il sistema
+            inutilizzabile
+\end{description}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\linewidth]{img/SEProcess.png}
+% \end{figure}
+
+\section{Evoluzione di un sistema}
+I sistemi complessi hanno una vita lunga e devono evolversi costantemente
+seguendo i nuovi requisiti. Questa evoluzione \`e \textbf{costosa}:
+deve essere \textit{analizzata} dal punto di vista tecnico e del business
+e possono nascere problemi inaspettati a causa dell'\textit{interazione} tra
+vecchi e nuovi componenti, la \textit{struttura} del sistema pu\`o
+corrompersi con l'evoluzione dello stesso.
+
+I sistemi che \textbf{devono} essere mantenuti vengono definiti \textbf{legacy}.
+
+\section{System procurement}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{img/SysProcurement.png}
+        \caption*{Schema per l'acquisizione di un sistema}
+\end{figure}
+
+Per \textit{system procurement} si intende l'\textbf{acquisizione} di un
+sistema per un'organizzazione con lo scopo di soddisfarne le necessit\`a.
+Solitamente \`e necessario stabilire a priori le \textbf{specifiche}
+e il design dell'architettura per:
+\begin{itemize}
+        \item Scrivere un contratto che stabilisca \textbf{cosa}
+                andr\`a fatto e \textbf{come}
+        \item Capire se esistono sistemi gi\`a sviluppati
+                (\textit{off the shelf}) per ci\`o
+                che serve (di solito meno costoso rispetto a costruire
+                un sistema da zero)
+\end{itemize}
+
+In generale, che sia \textit{off the shelf} o che sia creato da zero,
+lo sviluppo/mantenimento del software viene delegato a terzi.
+Il contraente si occuper\`a di delegare a sua volte parte del lavoro
+a sub-contraenti.
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=300pt]{img/ContractorModel.png}
+        \caption*{Modello contraente/subcontraente}
+\end{figure}
+
+\section{Concetti chiave}
+
+\begin{itemize}
+        \item Concetto generale di \textbf{Sistema} come insieme di
+                componenti interlegati che cooperano per un obbiettivo
+                in comune
+        \item \textbf{Problematiche} dell'Ingegneria dei Sistemi:
+                sviluppare sistemi complessi per durare nel tempo
+        \item \textbf{Emergent properties}, \textbf{Shall-not properties}
+        \item \textbf{Legacy}
+        \item Processo e fasi principali del SysEng
+        \item \textbf{System procurement} e modello
+        \item \textbf{Contractor e subcontractor} (contraente)
+\end{itemize}

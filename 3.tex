@@ -1,0 +1,327 @@
+\chapter{Processi Software}
+
+Un processo \`e un insieme strutturato di attivit\`a (\textit{routine})
+atte a trasformare \textit{qualcosa} da una forma ad un'altra.
+Per quanto riguarda i \textbf{processi software} possiamo
+caratterizzarli in:
+\begin{description}
+    \item[Primari] specificare, progettare, produrre, mantenere ed
+                estendere il prodotto SW (\textit{ricorda le fasi
+                per la creazione di un Software})
+    \item[Supporto] eseguiti parallelamente per garantire la qualit\`a
+                e il successo del progetto
+    \item[Gestione] necessarie per gestire il progetto di sviluppo
+                del prodotto SW
+\end{description}
+
+\section{Processi Primari}
+
+Il \textbf{Ciclo di Vita} \`e uno schema che specifica come sono
+definiti e organizzati i vari \textit{task} coinvolti
+nella progettazione, sviluppo e manutenzione di un prodotto.
+Decide \textbf{COSA} fare e \textbf{QUANDO}.
+
+Lo schema \`e \textbf{astratto} e \textbf{generale} (ricopre diverse
+casistiche senza entrare in contesti specifici e senza considerare
+i dettagli implementativi).
+
+Viene organizzato in \textbf{fasi} che definiscono i passi principali
+e \textbf{task} che definiscono i compiti da svolgere in ogni fase.\\
+
+La \textbf{Metodologia di Sviluppo} definisce \textbf{COME} svolgere
+i vari task in modo \textbf{effettivo} e specifica in modo
+\textbf{concreto} e \textbf{preciso} i dettagli implementativi considerando
+anche il contesto in cui si trova la metodologia.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=300pt]{img/PrimaryProcess.png}
+    \caption*{Rappresentazione grafica di un processo software}
+\end{figure}
+
+\subsection{Concetti chiave}
+
+\begin{itemize}
+    \item Cos'\`e un \textbf{processo software} e come caratterizzarlo
+    \item Processi primari: \textbf{Lifecycle}, \textbf{Methodology}
+\end{itemize}
+
+\section{Modello di un processo}
+
+Richiamando la definizione dei capitoli precedenti, il
+\textbf{modello di un processo software} \`e una rappresentazione semplificata
+di un processo software presentato da un particolare punto di vista.
+
+In particolare, i modelli ci permettono di parlare di \textbf{quali}
+attivi\`a devono essere svolte e in che ordine, tralasciando i dettagli
+implementativi. Permettono di descrivere:
+\begin{description}
+    \item[Prodotti] risultanti dalle attivit\`a del processo
+    \item[Ruoli] e responsabilit\`a delle persone coinvolte
+    \item[Pre/Post conditions] delle attivit\`a
+\end{description}
+
+Attraverso un modello, il processo pu\`o essere \textbf{plan-driven}
+(le attivit\`a seguono quello che \`e stato pianificato a priori)
+oppure \textbf{agile} (dove il \textit{planning} \`e incrementale
+e pu\`o essere modificato durante lo sviluppo per riflettere gli
+interessi del \textit{customer}). Nella pratica vengono per\`o utilizzati
+modelli \textbf{ibridi}.\\
+
+Ci preoccuperemo ora di descrivere alcuni \textit{process models}.
+\newpage
+
+\subsection{Waterfall}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=300pt]{img/Waterfall.png}
+    \caption*{Rappresentazione grafica del modello a cascata}
+\end{figure}
+
+Il \textbf{Modello a Cascata} prevede il susseguirsi ordinato delle
+varie fasi di sviluppo:
+\begin{description}
+    \item[Analisi dei Requisiti]: cercare di capire \textbf{cosa}
+            serve al customer
+    \item[Design del sistema e del software]
+    \item[Implementazione e testing]: viene scritto il codice e
+            testato singolarmente
+    \item[Integrazione e testing]: vengono integrate le varie
+            componenti del progetto e ne vengono testate le
+            interazioni
+    \item[Mantenimento]: fase di evoluzione del software e
+            supporto del customer    
+\end{description}
+
+\textbf{Idealmente} ad ogni fase si passa alla successiva,
+\textbf{nella pratica} si ritorna spesso indietro per successive
+modifiche al processo.
+
+\begin{description}
+    \item[Vantaggi:]\ 
+    \begin{itemize}
+        \item Idealmente non si torna indietro
+        \item Il passaggio alla fase successiva prevede la compilazione
+                di un documento che permette al committente di
+                mantenersi aggiornato sullo sviluppo del progetto
+                e di assicurarsi che il lavoro venga svolto secondo
+                i suoi interessi
+        \item Il passaggio da una fase all'altra \`e scandito da
+                documenti (piace ai manager) e si conosce sempre
+                la fase in cui ci si trova (a favore della
+                \textbf{visibilit\`a} e della \textbf{gestibilit\`a})
+    \end{itemize} 
+    \item[Svantaggi:]\ 
+    \begin{itemize}
+        \item Poco flessibile ai cambiamenti sui requisiti
+        \item Nella pratica si ritorna alle fasi precedenti e questo
+                \`e \textbf{tanto pi\`u costoso quanto pi\`u indietro
+                si ritorna}
+        \item Usato principalmente per grossi progetti di SysEng
+    \end{itemize} 
+\end{description}
+
+\subsection{Prototyping}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=300pt]{img/EvolutionaryModel.png}
+    \caption*{Rappresentazione del Modello Prototyping (vengono
+                prodotte diverse versioni del sistema via via
+                sempre pi\`u precise)}
+\end{figure}
+
+Il \textbf{Prototyping Model} o \textbf{Evolutionary Development}
+cerca di dare una soluzione al problema dei cambi frequenti
+sui requisiti. L'idea \`e quella di produrre diverse versioni
+successive del sistema per avere pi\`u informazioni possibili
+sul risultato finale che si vuole ottenere e su \textbf{come} ottenerlo.
+
+\begin{description}
+    \item[Exploratory]: l'obbiettivo \`e quello di partire dai
+                requisiti pi\`u chiari per poi evolvere il sistema
+                per comprendere i restanti requisiti lavorando a
+                contatto con il cliente
+    \item[Thrown-away]: partire dai requisiti meno chiari per
+                sviluppare un sistema \textbf{prototipo} per comprendere
+                meglio i requisiti; al termine viene \textit{gettato}
+                il prototipo 
+\end{description}
+
+\begin{description}
+    \item[Vantaggi:]\ 
+        \begin{itemize}
+            \item Riduzione del costo per le modifiche sui requisiti
+            \item Pi\`u partecipazione del cliente su cosa \`e stato
+                    implementato
+        \end{itemize}
+    \item[Svantaggi:]\ 
+        \begin{itemize}
+            \item Poca \textbf{visibilit\`a} (\textit{a che punto siamo?})
+            \item Poca \textbf{gestibilit\`a} (\textit{quanto manca?})
+            \item Poca \textbf{strutturazione}
+        \end{itemize}
+\end{description} 
+
+Viene utilizzato, in genere, per sistemi interattivi \textbf{medio-grandi},
+\textbf{tecnologie innovative}, \textbf{parti di grossi sistemi},
+\textbf{short lifetime systems}.
+
+\ \\~\\~\\
+
+\subsection{Formal systems development}
+Il modello si basa sulla trasformazione di una specificazione
+\textbf{matematica formale} in un programma eseguibile. Queste
+trasformazioni preservano la correttezza ed \`e quindi semplice
+dimostrare che il programma \`e conforme alle specifiche.
+Ottimo modello \textbf{teorico} ma nella pratica \textbf{inutilizzabile}.\\
+
+\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=300pt]{img/FormalSystem1.png}
+    \\~\\~\\
+    \includegraphics[width=300pt]{img/FormalSystem2.png}
+    \caption*{Fasi e trasformazioni del modello Formal System.}
+\end{figure}
+
+\ \\~\\
+Richiede \textbf{skills specializzate} ed \textbf{esperienza} per
+poter applicare la tecnica, inoltre \`e difficile specificare
+alcuni aspetti del sistema, come la \textbf{user interface}.
+Viene generalmente applicato a \textbf{sistemi critici} dove la
+\textit{safety} e la \textit{security} vengono sviluppate ancora prima
+che il sistema venga messo ad operare.
+
+\newpage
+\subsection{Reuse-oriented development}
+Generalmente utilizzato quando il sistema si costruisce integrando
+componenti gi\`a esistenti o quando viene adottato un sistema
+\textit{off-the-shelf}. Il modello ha preso sempre pi\`u piede
+con l'avvento della \textbf{OOP} e dell'\textbf{opensource}.
+
+\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=350pt]{img/ReuseOrientedModel.png}
+    \caption*{Le fasi del Reuse-oriented model.}
+\end{figure}
+
+Al classico modello generico viene aggiunta una fasa di \textit {
+system design} attraverso i componenti gi\`a esistenti che andranno
+poi testati e integrati.
+
+\ \\~\\
+\subsection{Incremental Development}
+Qualunque sia il modello o il progetto, i requisiti possono evolvere
+(e quasi certamente lo faranno). \`E necessario dunque gestire
+piccoli e mirati \textbf{incrementi} alle funzionalit\`a del prodotto.
+I requisiti vengono \textbf{prioritarizzati}. Quando un incremento
+viene iniziato i requisiti vengono congelati, tuttavia per i successivi
+incrementi possono ancora evolvere.
+
+\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=350pt]{img/IncrementalDevelopment.png}
+    \caption*{Una volta definiti i requisiti vengono assegnati
+        agli \textit{increments}, sviluppati, integrati e validati;
+        se il sistema non \`e ancora pronto si ritorna allo sviluppo.}
+\end{figure}
+
+\newpage
+\begin{description}
+    \item[Vantaggi:]\ 
+    \begin{itemize}
+        \item Il cliente pu\`o utilizzare il sistema anche se non
+                \`e completo (sfruttando i requisiti a priorit\`a
+                alta gi\`a sviluppati)
+        \item Gli \textit{early increments} possono essere sfruttati
+                come \textit{prototype}
+        \item \textbf{minor rischio di fallimento del progetto}
+                (\textit{perch\`e viene sviluppato incremento dopo
+                    incremento})
+        \item I requisiti a priorit\`a alta vengono sviluppati nei
+                primi incrementi e verranno quindi testati pi\`u volte 
+    \end{itemize} 
+    \item[Svantaggi:]\ 
+    \begin{itemize}
+        \item Senza \textit{tutti} i requisiti \`e difficile decidere
+                come organizzare gli incrementi (\textit{quanto
+                granulati devono essere?})
+        \item Pu\`o richiedere moduli contrattuali non-standard oppure
+                contratti successivi
+    \end{itemize} 
+\end{description}
+
+\ \\
+\subsection{Iterative Development}
+Una variante dello sviluppo incrementale prevede la costruzione del
+\textbf{sistema completo} e solo successivamente l'implementazione
+degli incrementi ad ogni nuova \textit{release}.
+
+\ \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=320pt]{img/DifferenceIncrementalIterative.png}
+    \caption*{Le differenze tra \textit{Incremental} e \textit{Iterative}
+            development: il primo prevede l'inserimento di nuove funzionalit\`a,
+            il secondo la modifica delle precedenti.}
+\end{figure}
+
+\subsection{Extreme Programming}
+Un nuovo approccio basato sullo sviluppo e la consegna di
+\textbf{piccoli incrementi} delle funzionalit\`a. \`E caratterizzato da
+\textbf{miglioramenti costanti del codice}, il \textbf{coinvolgimento
+dell'utente nello sviluppo} e \textit{pairwise programming}.\footnote{
+Due sviluppatori sulla stessa macchina: uno scrive e l'altro controlla
+che non ci siano errori.}
+
+\subsection{Spiral Development}
+\`E pi\`u un approccio generale che un modello di \textit{lifecycle}.
+Il processo \`e rappresentato come una spirale invece che una
+sequenza con backtracking: ogni ciclo della spirale rappresenta una
+fase del processo e \textbf{non esistono fasi fissate}, viene invece
+scelto in base a ci\`o che serve. I \textbf{rischi} sono cos\`i risolti
+durante il processo (partendo dalle attivit\`a che hanno il rischio
+\textbf{pi\`u alto}).\\~\\
+
+Il modello a spirale si compone di 4 fasi:
+\begin{description}
+    \item[Identificazione dell'obbiettivo]
+    \item[Valutazione e riduzione del rischio]
+    \item[Sviluppo e validazione]
+    \item[Pianificazione] della successiva fase della spirale
+\end{description}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=350pt]{img/SpiralModel.png}
+\end{figure}
+
+\section{Il rischio}
+Il \textbf{rischio} denota la precisa probabilit\`a di una specifica
+eventualit\`a, convenzionalmente \textbf{negativa}, che pu\`o
+influenzare alcune caratteristiche del sistema che possono emergere
+in futuro.\\~\\
+
+\subsection{Le cause del fallimento di un progetto di sviluppo SW}
+\begin{itemize}
+    \item Requisiti incompleti o vaghi
+    \item Mancanza di coinvolgimento dell'utente
+    \item Mancanza di risorse
+    \item \textit{Skills} non adatte al lavoro
+    \item Aspettativa irrealistica
+    \item \textbf{Management}, \textit{planning} o \textit{cost estimation}
+            inadeguati
+    \item Mancanza di comunicazione
+    \item Architettura inadeguata
+    \item Cambiamenti dei requisiti o delle specifiche
+\end{itemize}
+
+\subsection{Concetti chiave}
+
+TODO
+
+\input{3.5}
